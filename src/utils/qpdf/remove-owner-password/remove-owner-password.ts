@@ -1,4 +1,3 @@
-// @ts-ignore
 import Module from "@jspawn/qpdf-wasm/qpdf.js";
 import WASM_URL from "@jspawn/qpdf-wasm/qpdf.wasm?url";
 
@@ -29,9 +28,11 @@ export async function removeOwnerPassword(blob: Blob): Promise<Blob> {
     throw new Error("Failed to remove owner password");
   }
 
-  const outputBlob = await mod.FS.readFile(output, { encoding: "binary" });
+  const outputBuffer: Uint8Array = mod.FS.readFile(output, {
+    encoding: "binary",
+  });
 
-  const resultBlob = new Blob([outputBlob], { type: "application/pdf" });
+  const resultBlob = new Blob([outputBuffer], { type: "application/pdf" });
 
   return resultBlob;
 }
