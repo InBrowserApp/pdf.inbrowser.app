@@ -17,7 +17,7 @@ export default defineConfig({
         "masked-icon.svg",
       ],
       workbox: {
-        globPatterns: ["assets/*"],
+        globPatterns: ["assets/*", "**/*.{js,css,html}"],
         maximumFileSizeToCacheInBytes: 10000000,
       },
       manifest: {
