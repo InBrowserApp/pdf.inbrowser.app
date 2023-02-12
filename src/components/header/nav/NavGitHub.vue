@@ -3,6 +3,7 @@
     text
     tag="a"
     href="https://github.com/InBrowserApp/pdf.inbrowser.app"
+    target="_blank"
   >
     <template #icon>
       <n-icon>
