@@ -1,6 +1,8 @@
 <template>
   <nav class="header-nav">
     <NavGitHub />
+    <n-divider vertical />
+    <NavInBrowserApp />
   </nav>
 </template>
 
@@ -8,6 +10,7 @@
 import { NDivider } from "naive-ui";
 
 import NavGitHub from "./NavGitHub.vue";
+import NavInBrowserApp from "./NavInBrowserApp.vue";
 </script>
 
 <style scoped>
